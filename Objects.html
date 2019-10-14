@@ -14,7 +14,18 @@
     function teslaAutoPilot(){
         document.write("<h2> This car has auto Pilot</h1>");
     }
-    teslaAutoPilot();
+    teslaAutoPilot();*/
+    //Creating object
+    var Car = {
+    car_brand : "Tesla",
+    car_model : "Model 3",
+    price : 35000,
+    teslaAutoPilot : function()
+    {
+        document.write("<h2> This car has auto Pilot</h1>");
+    }
+    document.write("<u> "+ Car.teslaAutoPilot() + " </u>");
+    }
         </script>
 </body>
 </html>

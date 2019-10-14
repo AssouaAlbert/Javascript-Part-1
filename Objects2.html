@@ -4,30 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Objects</title>
+    <title>Objects 2</title>
 </head>
 <body>
-    <script type= "text/javascript">
-    /*var car_brand = "Tesla";
-    var car_model ="Model 3";
-    var price = 35000;
-    function teslaAutoPilot(){
-        document.write("<h2> This car has auto Pilot</h1>");
-    }
-    teslaAutoPilot();*/
-    //Creating object
-    /*var Car = {
-    car_brand : "Tesla",
-    car_model : "Model 3",
-    price : 35000,
-    teslaAutoPilot : function()
-    {
-        document.write("<h2> This car has auto Pilot</h1>");
-            return ("This is a return statement");
-    }
-    }
-    Car.teslaAutoPilot();
-    document.write("Do function " + Car.teslaAutoPilot());*/
+    <script type="text/javascript">
     //Another way to create multiple objects using constuctor
     function Car(car_brand,car_model,price)
     {
@@ -42,13 +22,18 @@
 
     }
     var car1 = new Car("Tesla", "Model", 35000);
+    document.write("The type of is: "+ typeof(car1))
     var car2 = new Car("Audi", "Sidan", 7000);
     var car3 = new Car ("Volvo", "Sedan", 13000)
+    //100 line of code
+    document.write("<br><h1>Adding a property to an object</h1>");
+    car1.fueltype = "Electric";
     car1.moto();
-    car2.moto();
-    car3.moto();
-
+    document.write("<h2>"+ car1.fueltype+ "</h2>");
+    document.write("<br><h1>Deleted a property to an object</h1>");
+    //delete car1.fueltype;
 
         </script>
+    
 </body>
 </html>

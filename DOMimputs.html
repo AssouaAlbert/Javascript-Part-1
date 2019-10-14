@@ -7,32 +7,33 @@
     <title>INputs from radio buttons</title>
     <script>
         function fn1() {
-            var val1 = document.getElementById("radio1")
-            var val2 = document.getElementById("radio2")
-            var val3 = document.getElementById("radio3")
+            var val1 = document.getElementById("radio1");
+            var val2 = document.getElementById("radio2");
+            var val3 = document.getElementById("radio3");
+
+
             if(val1.checked==true )
             {
-                alert("The gender selected is "+ val1);
+                alert("The gender selected is "+ val1.value);
             }
              else if(val2.checked==true )
             {
-                alert("The gender selected is "+ val1);
+                alert("The gender selected is "+ val2.value);
             }
             else if(val3.checked==true )
             {
-                alert("The gender selected is "+ val1);
+                alert("The gender selected is "+ val3.value);
             }
             else
-            alert("No value selected")
+            alert("No value selected");
         }
     </script>
 </head>
 <body>
-        <input id="radio1" type="radio" name="gender" value="male"> Male<br>
-        <input id="radio2" type="radio" name="gender" value="female"> Female<br>
-        <input id="radio3" type="radio" name="gender" value="other"> Other
-        <br/>
-        <button >Click Me</button>
-
+        <input id="radio1" type="radio" name="gender" value="male"> Male</input><br>
+        <input id="radio2" type="radio" name="gender" value="female"> Female</input><br>
+        <input id="radio3" type="radio" name="gender" value="other"> Other</input><br>
+        <button onclick="fn1()">Click Me</button>
+        <p id="print"></p>
 </body>
 </html>

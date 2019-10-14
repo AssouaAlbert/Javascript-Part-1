@@ -60,7 +60,15 @@
 		var age = (x<18)?"TOO YOUNG":"OLD ENOUGH";
 		document.write("<br><br>The age is "+ age)
 		//******************
-		document.write(" <br><br><br>" + typeof (age))
+		document.write(" <br><br><br> Age is of type: " + typeof (age))
+		function add_two_number(){
+			var a = b = 6;
+			var total;
+			document.write("<br><br>The addiontion is: ", a + b);
+			return total = (a+b);
+		}
+		var total =  add_two_number();
+		document.write("<br><br>The return value is :", total);
 	</script>
 </body>
 </html>

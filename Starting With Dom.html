@@ -13,8 +13,32 @@
        // document.write("<h1>You clicked me</h1>");
         
     }
+    function SaveMe() {
+        var str = document.getElementById("question").value;
+        document.getElementById("changeme").innerHTML = str;
+        
+    }
+    function check()
+    {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if(email ==password)
+        {
+            alert("Sorry " + email +" password match. Enter different credentials" );
+        }
+
+    }
         </script>
     <button type="button" onclick="print()">Press to Click</button>
     <h2 id="changeme" style="background-color: aquamarine">Take action from above!!</h2>
+    <input id="question" type="text" placeholder="Where are you now?">
+    <br/>
+    <button id="button" onclick="SaveMe()" >Print text</button>
+    <h2 id="change2"></h2>
+    <br>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Enter password">
+    <br/>
+    <button onclick="check()">Submnit</button>
 </body>
 </html>

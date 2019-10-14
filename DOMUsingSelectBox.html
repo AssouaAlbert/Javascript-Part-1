@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SelectBox Dom</title>
+    <script type="text/javascript">
+        function fn1(){
+            var val = document.getElementById("selectbox");
+            alert(val.options[val.selectedIndex].value);
+            document.getElementById("changeme").innerHTML = val.value;
+        }
+    </script>
+</head>
+<body>
+    <select id="selectbox">
+        <option value="Tesla">Tesla</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Audi">Audi</option>
+    </select>
+    <br>
+    <button onclick="fn1()">Click me</button>
+    <h2 id="changeme"></h2>
+    
+</body>
+</html>

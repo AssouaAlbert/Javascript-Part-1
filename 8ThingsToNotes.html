@@ -22,14 +22,26 @@
     const ExpensiveCars = cars.filter((item) => {
         return item.price <= 4500;
         //filter is a funtion of array with just on parameter return true or flase
+        //id price a row into new array if item.price<=4500
     })
     //map an array creates a new array from another array by mapping a spacific column
     const MapArray_NamesOfCars = cars.map((item) => {
         return item.name;
-        //filter is a funtion of array with just on parameter return true or flase
+        //returns the items name
+    })
+    const MapArray_PriceOfCars = cars.map((item) => {
+        return item.price;
+        //returns the items name
+    })
+    //Create new array Tesla_Car of car  from Cars if name of car is Tesla
+    const Tesla_Car = cars.map((item) => {
+        return item.name == "Tesla";
+        //returns the the FIRST row of the array if array.name equals Tesla
     })
     console.log(cars);
     console.log(MapArray_NamesOfCars);
+    console.log(MapArray_PriceOfCars);
+    console.log(ExpensiveCars);
     console.log(ExpensiveCars);
     </script>
 </head>

@@ -20,9 +20,17 @@
     ]
     //Create new array ExpensiveCars from cars prices > 4500
     const ExpensiveCars = cars.filter((item) => {
-        return cars.price > 4500;
+        return item.price <= 4500;
         //filter is a funtion of array with just on parameter return true or flase
     })
+    //map an array creates a new array from another array by mapping a spacific column
+    const MapArray_NamesOfCars = cars.map((item) => {
+        return item.name;
+        //filter is a funtion of array with just on parameter return true or flase
+    })
+    console.log(cars);
+    console.log(MapArray_NamesOfCars);
+    console.log(ExpensiveCars);
     </script>
 </head>
 <body>

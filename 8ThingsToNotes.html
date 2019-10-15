@@ -34,15 +34,15 @@
         //returns the items name
     })
     //Create new array Tesla_Car of car  from Cars if name of car is Tesla
-    const Tesla_Car = cars.map((item) => {
-        return item.name == "Tesla";
+    const Tesla_Car = cars.find((item) => {
+       return item.name === "Tesla";
         //returns the the FIRST row of the array if array.name equals Tesla
     })
     console.log(cars);
     console.log(MapArray_NamesOfCars);
     console.log(MapArray_PriceOfCars);
     console.log(ExpensiveCars);
-    console.log(ExpensiveCars);
+    console.log(Tesla_Car);
     </script>
 </head>
 <body>

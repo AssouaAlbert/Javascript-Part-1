@@ -41,14 +41,28 @@
     //Return true or fals from if condtion and maps it to new array
     const TrueorFlase_PriceOfCars = cars.map((item) => {
         return item.price > 6000;
-        //returns the items name
+        //returns the items bolean
     })
+    //Using the for each statement in an array. For ewach item in aray print
+    cars.forEach((item) =>
+    {
+        console.log("The price is "+ item.price +" and the car is "+item.name);
+    })
+    //the some function check if any member of the array holds the condition and returns a true value if any member is true
+    //Example check some member if the array the price is greater than 6000
+    const CarISExpensive_PriceOver6000 = cars.some((item) => {
+        return item.price > 6000;
+        //returns the items true or false
+        //Same with ever ((item)=>{}) is used to check if all the items meet the condition
+    })
+
     console.log(cars);
     console.log(MapArray_NamesOfCars);
     console.log(MapArray_PriceOfCars);
     console.log(ExpensiveCars);
     console.log(Tesla_Car);
-    console.log(TrueorFlase_PriceOfCars);
+    console.log(CarISExpensive_PriceOver6000);
+
     </script>
 </head>
 <body>

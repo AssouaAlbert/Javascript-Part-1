@@ -18,10 +18,14 @@
         { name:'BMW', price: 4299},
         { name:'Chervolet', price:5000 }
     ]
-    //Create new array from cars prices > 4500
+    //Create new array ExpensiveCars from cars prices > 4500
+    const ExpensiveCars = cars.filter((item) => {
+        return cars.price > 4500;
+        //filter is a funtion of array with just on parameter return true or flase
+    })
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

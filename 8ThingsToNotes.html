@@ -38,11 +38,17 @@
        return item.name === "Tesla";
         //returns the the FIRST row of the array if array.name equals Tesla
     })
+    //Return true or fals from if condtion and maps it to new array
+    const TrueorFlase_PriceOfCars = cars.map((item) => {
+        return item.price > 6000;
+        //returns the items name
+    })
     console.log(cars);
     console.log(MapArray_NamesOfCars);
     console.log(MapArray_PriceOfCars);
     console.log(ExpensiveCars);
     console.log(Tesla_Car);
+    console.log(TrueorFlase_PriceOfCars);
     </script>
 </head>
 <body>

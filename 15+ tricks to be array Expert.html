@@ -18,7 +18,14 @@
         console.dir("The length of the array is : " + myArray.length)
         //Truncate an array to 2
         myArray.length =2;
-
+        myArray.push("The", "man", "came", "to", "the", "house", "today", "to", "give", "things", "for", "church");
+        //Slice use to cut and array from point a to b
+        var newArray = myArray.slice(2);
+        //Creates new array from index 2 to maxlencht of myarray
+        newArray.forEach((item)=>
+        {
+            console.dir(newArray.indexOf(item) + " The value of index is " + item );
+        })
         </script>
 </body>
 </html>

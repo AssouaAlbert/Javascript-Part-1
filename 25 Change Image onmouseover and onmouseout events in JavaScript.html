@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>25 Change Image onmouseover and onmouseout events in JavaScript</title>
+    <script type="text/javascript">
+    function setNewImage(){
+        document.getElementById("img1").src = "Car and Sale icon.png";
+    }
+    function setOldImage() {
+        document.getElementById("img1").src = "Cars n sales Cover-01.png";        
+    }
+    </script>
 </head>
 <body>
-    <img src="Cars n sales Cover-01.png" width="600" height="400"/>
+    <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src = "Cars n sales Cover-01.png" width="600" height="400"/>
     
 </body>
 </html>

@@ -13,18 +13,22 @@
         //What is the difference between dir and log
         //Push at the start of an array
         myArray.unshift("Come", "To","Church");
-        console.dir(myArray);
+        //console.dir(myArray);
         // Print out the lenght of an array
         console.dir("The length of the array is : " + myArray.length)
         //Truncate an array to 2
         myArray.length =2;
         myArray.push("The", "man", "came", "to", "the", "house", "today", "to", "give", "things", "for", "church");
         //Slice use to cut and array from point a to b
-        var newArray = myArray.slice(2);
-        //Creates new array from index 2 to maxlencht of myarray
+        var newArray = myArray.slice(5);
+        myArray.forEach((item)=>
+        {
+        console.dir(myArray.indexOf(item) + " The value of index is " + item );
+        })
+         //Creates new array from index 2 to maxlencht of myarray
         newArray.forEach((item)=>
         {
-            console.dir(newArray.indexOf(item) + " The value of index is " + item );
+            console.dir(" The value of index is " + item );
         })
         </script>
 </body>

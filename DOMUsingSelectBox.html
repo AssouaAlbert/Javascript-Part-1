@@ -8,6 +8,9 @@
     <script type="text/javascript">
         function fn1(){
             var val = document.getElementById("selectbox");
+            //val is an object
+            //select is an array with options as values
+            //
             alert(val.options[val.selectedIndex].value);
             document.getElementById("changeme").innerHTML = val.value;
         }

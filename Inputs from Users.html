@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inputs from users</title>
+    <script type="text/javascript">
+    function fn1(){
+        var str = document.getElementById("text").value;
+        var element = document.getElementById("changeme");
+        element.innerHTML = str;
+        element.style.backgroundColor = "blue";
+    }
+    </script>
+</head>
+<body>
+    <input id="text" placeholder="Enter text"/>
+    <br>
+    <button id="button1" onclick="fn1()">Click Me</button>
+    <h1 id="changeme">This text will change</h1>
+</body>
+</html>

@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        function validate(){
+            var username = document.getElementById("user").value;
+            var regx = /E00/i;
+            //i is a filter for any case upper or lower
+            if( regx.test(username))
+          
+            {
+                alert("Valid Username");
+            }
+            else{
+                alert("Invalid Username");            
+                document.getElementById("lbluser").style.visibility= "visible";
+            }
+        }
+    </script>
 </head>
 <body>
     <form action="Success Form Validations in JavaScript.html">

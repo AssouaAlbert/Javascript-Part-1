@@ -12,7 +12,8 @@
             var password = document.getElementById("password");
             if (user.value.trim() == "")
             {
-                alert("Blank username")
+                //alert("Blank username");
+                uname.style.border= "solid 3px red";
                 return false;
             }
             else if (password.value.trim()== "")
@@ -34,6 +35,7 @@
 <body>
     <form onsubmit="return validate();" action="Success Form Validations in JavaScript.html">
         <input type="text" id="username" placeholder="Enter User Name"/>
+        <label id="lbluser" style="color: red; visibility: hidden;">
         <br/><br/>
         <input type="password" id="password" placeholder="Password"/>
         <br/><br/>

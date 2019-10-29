@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>33 Timing Functions in JavaScript</title>
+    <script lang="javascript">
+        /*
+            1. settimeout () allows you toexecute a funtion after a particulat time (interval)only ounce
+            1. Cleartimeout()
+            3. Setinterval()
+            4. clearinterval() 
+        */
+        var id = 0;
+
+        function printmessage() {
+            document.getElementById("apply").innerHTML= "5 seconds have passed";        }
+        function  start(){
+           id =  window.setTimeout(printmessage,5000);
+        }
+        function  stop(){
+            window.clearTimeout(id);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="start()" id="startbtn">Start</button>
+    <h2 id="apply">Some Text</h2>
+    <button onclick="stop()" id="stopbtn"> Stop</button>
+</body>
+</html>

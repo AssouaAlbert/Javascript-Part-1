@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>31 Email Validation in JavaScript</title>
+    <script lang="javascript">
+        /*
+            \d - match any digit (0 to 9)
+            \w - match any word charater (a-z, A-Z, 0-9 and _ )
+            \s - match whitespace chatacter (space and tabs)
+            \t - match a tab only
+        */
+        function  validate() {
+            var text;
+            text = document.getElementById("text1").value;
+            var regexp = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})$/;
+            if(regexp.test(text)){
+                document.getElementById("lable").innerHTML = "Valid";
+                document.getElementById("lable").style.color = "green";
+                document.getElementById("lable").style.visibility="visible";
+
+            }
+            else{
+                document.getElementById("lable").innerHTML="invalid";
+                document.getElementById("lable").style.visibility="visible";
+                document.getElementById("lable").style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input id="text1" placeholder="Email Address" type="text"/>
+        <br>
+        <label for="text" id="lable" style="color:red; visibility: hidden">Invalid</label>
+        <button onclick="validate()">Submit</button>
+    </form>
+</body>
+</html>

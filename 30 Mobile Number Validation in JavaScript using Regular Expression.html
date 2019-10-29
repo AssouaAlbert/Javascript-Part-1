@@ -14,11 +14,13 @@
         */
         function  validate() {
             var text;
-            var regexp = /abc/;
+            text = document.getElementById("text1").value;
+            var regexp = /^[6][5,7,9]\d{7}$/;
             if(regexp.test(text)){
-                document.getElementById("lable").innerHTML = Valid;
-                document.getElementById("lable").style.visibility="visible";
+                document.getElementById("lable").innerHTML = "Valid";
                 document.getElementById("lable").style.color = "green";
+                document.getElementById("lable").style.visibility="visible";
+
             }
             else{
                 document.getElementById("lable").innerHTML="invalid";
@@ -30,7 +32,7 @@
 </head>
 <body>
     <form>
-        <input id="text" placeholder="Cellphone" type="text"/>
+        <input id="text1" placeholder="Cellphone" type="text"/>
         <br>
         <label for="text" id="lable" style="color:red; visibility: hidden">Invalid</label>
         <button onclick="validate()">Submit</button>

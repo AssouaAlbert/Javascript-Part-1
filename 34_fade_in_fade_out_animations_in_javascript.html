@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>34_fade_in_fade_out_animations_in_javascript</title>
+    <script lang="javascript">
+        //varialble to access the opacity of picture
+        var opacity = 0;
+        //variable to set the interval
+        var intervalID = 0;
+        //function to call the fadeout after every 20ms(0.02s)
+        function fadeout()
+        {
+            intervalID = window.setInterval(hide,20);
+        }
+        function hide() {
+            //variable to access the image tag
+            var img = document.getElementById("img1");
+            //opacity is handled differently for different browsers
+            //Therefore we can not use
+            // var img = document.getElementById("img").style.opacity
+            //So we use this other way
+            opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if(opacity>0)
+            {
+                opacity--;
+                img.style.opacity=opacity;
+            }
+            else{
+                clearInterval(intervalID);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fadeout()" id="btnAdd">Fade Out</button>
+    <br>
+    <!--
+        Opcaity ranges from 0 to 1 e.g. 0.3, 0.6, 0.9
+        <img id="img1" src="Themind.jpg" style="opacity:0.7"/>
+        but it was not used here because the picture was displayed with the default opacity of 1
+     -->
+    <img id="img1" src="Themind.jpg"/>
+    <br>
+    <button onclick="fadein()" id="btnStop">Fade In</button>
+</body>
+</html>

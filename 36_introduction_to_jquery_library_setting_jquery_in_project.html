@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>36_introduction_to_jquery_library_setting_jquery_in_project</title>
+    <script>
+    </script>
 </head>
 <body>
-    
+    <h1 id="Staywoke">Happy memories</h1>
+    <button id="btn1" onclick="fn1()">Click Me</button>
 </body>
+<!-- This line is a link to the jquery lib which is in the relative path-->
+<script src="js/jquery.js"></script>
+<script>
+    function fn1() {
+        //This line calls the jquery function which fades the text after 2000 seconds
+        $("#Staywoke").fadeToggle(2000);
+    }
+</script>
 </html>

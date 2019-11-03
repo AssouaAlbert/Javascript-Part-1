@@ -11,14 +11,16 @@
 </script>
 </script>
 <body>
-        <h1 id="Staywoke">Happy memories</h1>
+        <h1 class="Happy" id="Staywoke">Happy memories</h1>
+        <h1 class="Happy" id="woke">Happy memories</h1>
+        <h1 class="Memeories" id="">Happy memories</h1>
         <button id="btn1" onclick="fn1()">Click Me</button>
 </body>
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script>
     function fn1() {
-        alert("Hit me!!");
+        $(".Happy").fadeOut(2000);
         //Selector
         //Selector for elements $(h2), or $(p) or $(img)
         //Selector ofr id $(#id), or $(#man)

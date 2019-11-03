@@ -7,13 +7,36 @@
     <title>34_fade_in_fade_out_animations_in_javascript</title>
     <script lang="javascript">
         //varialble to access the opacity of picture
-        var opacity = 0;
+        var opacity1 = 0;
         //variable to set the interval
         var intervalID = 0;
         //function to call the fadeout after every 20ms(0.02s)
         function fadeout()
         {
-            intervalID = window.setInterval(hide,20);
+            intervalID = setInterval(hide,200);
+        }
+        //function to call the fadein after every 20ms(0.02s);      
+        function fadein()
+        {
+            intervalID = setInterval(show,200);
+        }
+        function show() {
+            //variable to access the image tag
+            var img = document.getElementById("img1");
+            //opacity is handled differently for different browsers
+            //Therefore we can not use
+            // var img = document.getElementById("img").style.opacity
+            //So we use this other way
+            opacity1 = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            //opacity1 = img.style.opacity;
+            if(opacity1<1)
+            {
+                opacity1 = opacity1 + 0.1;
+                img.style.opacity=opacity1;
+            }
+            else{
+                clearInterval(intervalID);
+            }
         }
         function hide() {
             //variable to access the image tag
@@ -22,11 +45,12 @@
             //Therefore we can not use
             // var img = document.getElementById("img").style.opacity
             //So we use this other way
-            opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
-            if(opacity>0)
+            opacity1 = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            //opacity1 = img.style.opacity;
+            if(opacity1>0)
             {
-                opacity--;
-                img.style.opacity=opacity;
+                opacity1 = opacity1 - 0.1;
+                img.style.opacity=opacity1;
             }
             else{
                 clearInterval(intervalID);

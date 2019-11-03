@@ -13,11 +13,15 @@
             4. clearinterval() clears a time set with the setinterval() method
         */
         var id = 0;
-
+        var seconds = 0;
         function printmessage() {
-            document.getElementById("apply").innerHTML= "5 seconds have passed";        }
+            //document.getElementById("apply").innerHTML= "5 seconds have passed";
+            document.getElementById("apply").innerHTML= seconds+" seconds";       
+            seconds++
+        }
         function  start(){
-           id =  window.setTimeout(printmessage,5000);
+           //id =  window.setTimeout(printmessage,5000);
+           id =  window.setTimeout(printmessage,1000);
         }
         function  stop(){
             window.clearTimeout(id);

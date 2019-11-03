@@ -7,24 +7,27 @@
     <title>35_zoom_in_zoom_out_effect_in_javascript</title>
     <script lang="javascript">
         var width = 100;
+        var height = 100;
         var difference = 2;
         var IntervalID = 0;
         function increase()
         {
             clearInterval(IntervalID);
-            IntervalID = setInterval(zoomIn, 20);
+            IntervalID = setInterval(zoomIn, 1);
         }
         function decrease()
         {
             clearInterval(IntervalID);
-            IntervalID = setInterval(zoomout, 20);
+            IntervalID = setInterval(zoomout, 1);
         }
         function zoomout()
         {
             if(width > 100)
             {
                 width= width-difference;
+                height= height-difference;
                 document.getElementById("img1").style.width = width;
+                document.getElementById("img1").style.height = height;
                 console.log(width);
             }
             else{
@@ -36,7 +39,9 @@
             if(width < 200)
             {
                 width= width+difference;
+                height= height+difference;
                 document.getElementById("img1").style.width = width;
+                document.getElementById("img1").style.height = height;
                 console.log(width);
             }
             else{
@@ -48,7 +53,7 @@
 <body>
     <br>
     <br>
-    <img width="10"  onmouseover="increase()" onmouseout="decrease()" id="img1" src="Themind.jpg" alt="J. Cole The mind">
+    <img  onmouseover="increase()" onmouseout="decrease()" id="img1" src="free-dailymotion-download-100x100.png" alt="J. Cole The mind was change to this">
 
 </body>
 </html>

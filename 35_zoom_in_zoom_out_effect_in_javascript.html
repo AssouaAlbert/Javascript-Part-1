@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>35_zoom_in_zoom_out_effect_in_javascript</title>
+    <script lang="javascript">
+        var width = 100;
+        var difference = 2;
+        var IntervalID = 0;
+        function increase()
+        {
+            clearInterval(IntervalID);
+            IntervalID = setInterval(zoomIn, 20);
+        }
+        function decrease()
+        {
+            clearInterval(IntervalID);
+            IntervalID = setInterval(zoomout, 20);
+        }
+        function zoomout()
+        {
+            if(width > 100)
+            {
+                width= width-difference;
+                document.getElementById("img1").style.width = width;
+                console.log(width);
+            }
+            else{
+                clearInterval(IntervalID);
+            }
+        }       
+        function zoomIn()
+        {
+            if(width < 200)
+            {
+                width= width+difference;
+                document.getElementById("img1").style.width = width;
+                console.log(width);
+            }
+            else{
+                clearInterval(IntervalID);
+            }
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <br>
+    <img width="10"  onmouseover="increase()" onmouseout="decrease()" id="img1" src="Themind.jpg" alt="J. Cole The mind">
+
+</body>
+</html>

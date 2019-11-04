@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>38_jquery_selectors_part_2</title>
+    <title>41 effects in jquery part 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <script type="text/javascript">
@@ -12,8 +12,8 @@
 </script>
 </script>
 <body>
-        <button id="mee" >Mouse Enter/Leave </button>
-        <h1 id="fadeheader">Fade this header</h1>
+        <button id="btn0" >Click Me 0 </button>
+        <button id="btn00" >Click Me 00 </button>
         <h1 class="Happy" id="Staywoke">Happy memories</h1>
         <h1 class="Happy" id="woke">Happy memories</h1>
         <h1 class="Memeories" id="">Happy memories</h1>
@@ -49,10 +49,10 @@
                 <li>7Batibo</li>
             </ol>
         </div>
-        <button id="btn1" >Click Me 1 </button>
+        <button id="btn1" >Click Me 1 DB button </button>
         <button id="btn2" >Click Me 2 </button>
         <button id="btn3" >Click Me 3 </button>
-        <button id="btn4" >Hide first paragraph</button>
+        <button id="btn4" >Hide first paragraph DB button</button>
         <button id="btn5" >Click Me 5 </button>
 </body>
 
@@ -60,28 +60,20 @@
 <script>
     //Document ready is caled when the entire document is ready
     //Therefore this script will only work when the page has completely loaded;
-    $(document).ready(function(){
+    $("document").ready(function(){
     //We will move the button onclick even to jquery
-    $("#btn1").click(fn1);
+    $("#btn1").dbclick(fn1); //button will work only after double click
     $("#btn2").click(fn2);
     $("#btn3").click(fn3);
-    $("#btn4").click(fn4);
+    $("#btn4").dbclick(fn4); //button will work only after double click
     $("#btn5").click(fn5);
     /* Alternatively it can be writte as
     $(".class,#id,element").click(function fnction(){
         //define the function here
     });
     */
-    $("#mee").mouseenter(fn6); //mouse enter
-    $("#mee").mouseleave(fn7); //mouse leaving the element
-    function fn6() {
-        $("#fadeheader").fadeOut(2000);
-        
-    }
-    function fn7() {
-        $("#fadeheader").fadeIn(2000);
-        
-    }
+    $(".btn0").mouseenter(mouse1);
+    $(".btn0").mouseleave(mouse2);
     function fn1() {
         $(".Happy").fadeOut(2000);
         //Selector
@@ -104,6 +96,13 @@
     function fn5() {
         $("li:even").fadeOut(2000);
     }
+    function mouse1() {
+        $("h1").fadeOut(2000);
+    }
+    function mouse2() {
+        $("h1").fadeIn(2000);
+    }
+
 });
 </script>
 

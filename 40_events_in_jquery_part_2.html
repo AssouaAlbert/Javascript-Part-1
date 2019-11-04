@@ -47,10 +47,10 @@
                 <li>7Batibo</li>
             </ol>
         </div>
-        <button id="btn1" >Click Me 1 </button>
+        <button id="btn1" >Click Me 1 DB button </button>
         <button id="btn2" >Click Me 2 </button>
         <button id="btn3" >Click Me 3 </button>
-        <button id="btn4" >Hide first paragraph</button>
+        <button id="btn4" >Hide first paragraph DB button</button>
         <button id="btn5" >Click Me 5 </button>
 </body>
 
@@ -60,10 +60,10 @@
     //Therefore this script will only work when the page has completely loaded;
     $("document").ready(function(){
     //We will move the button onclick even to jquery
-    $("#btn1").click(fn1);
+    $("#btn1").dbclick(fn1); //button will work only after double click
     $("#btn2").click(fn2);
     $("#btn3").click(fn3);
-    $("#btn4").click(fn4);
+    $("#btn4").dbclick(fn4); //button will work only after double click
     $("#btn5").click(fn5);
     /* Alternatively it can be writte as
     $(".class,#id,element").click(function fnction(){

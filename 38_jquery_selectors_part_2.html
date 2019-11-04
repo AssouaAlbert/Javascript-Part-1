@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>38_jquery_selectors_part_2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript">
+
+</script>
+</script>
+<body>
+        <h1 class="Happy" id="Staywoke">Happy memories</h1>
+        <h1 class="Happy" id="woke">Happy memories</h1>
+        <h1 class="Memeories" id="">Happy memories</h1>
+        <h2>Selectors in jQuery</h2>
+        <div id="firstdiv" class="div">
+            <p>
+                This is a paragraph 1 in div 1
+            </p>
+        </div>
+        <div id="seconddiv" class="div">
+            <p>
+                This is a paragraph 1 in div 2
+            </p>
+        </div>
+        <div id="thirddiv" class="div">
+            <p>
+                This is a paragraph 1 in div 3
+            </p>
+        </div>
+        <div id="fourthdiv" class="div">
+            <p>
+                This is a paragraph 1 in div 4
+            </p>
+        </div>
+        <div id="listdiv" class="div">
+            <ul>
+                <li>Mankon</li>
+                <li>Bafut</li>
+                <li>Bali</li>
+                <li>Mbo</li>
+                <li>Mamfe</li>
+            </ul>
+        </div>
+        <button id="btn1" onclick="fn1()">Click Me 1 </button>
+        <button id="btn2" onclick="fn2()">Click Me 2 </button>
+        <button id="btn3" onclick="fn3()">Click Me 3 </button>
+        <button id="btn4" onclick="fn4()">Click Me 4 </button>
+        <button id="btn5" onclick="fn5()">Click Me 5 </button>
+</body>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+    function fn1() {
+        $(".Happy").fadeOut(2000);
+        //Selector
+        //Selector for elements $(h2), or $(p) or $(img)
+        //Selector ofr id $(#id), or $(#man)
+        //Selector ofr id $(.class), or $(.school)
+    }
+    function fn1() {
+        $(".Happy").fadeOut(2000);
+    }
+</script>
+
+</html>

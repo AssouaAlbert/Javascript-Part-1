@@ -56,6 +56,9 @@
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script>
+    //Document ready is caled when the entire document is ready
+    //Therefore this script will only work when the page has completely loaded;
+    $("document").ready(function(){
     //We will move the button onclick even to jquery
     $("#btn1").click(fn1);
     $("#btn2").click(fn2);
@@ -89,6 +92,7 @@
     function fn5() {
         $("li:even").fadeOut(2000);
     }
+});
 </script>
 
 </html>

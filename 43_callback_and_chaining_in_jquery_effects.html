@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>43 Effects in Jquery - Animate effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Effects in jQuery (moving the position of the cube from possition a to b with an animation)</h1>
+    <p>This is a paragraph outside a DIV</p>
+    <button id="btn1">Click me</button>
+    <button id="btn2">Click Me too</button>
+    <button id="btn3">Animate</button>
+    <div id="firstdiv" class="mydivs">
+        <p>
+                This is a paragraph 1 in div 1
+        </p>
+        <p>
+                This is a paragraph 2 in div 1
+        </p>
+    </div>
+    <div id="seconddiv" class="mydivs">
+            <p>
+                    This is a paragraph 1 in div 2
+            </p>
+            <p>
+                    This is a paragraph 2 in div 2
+            </p>
+        </div>
+        <div id="thirddiv" class="mydivs">
+            <ol>
+                <li>1 Bamenda</li>
+                <li>2 Buea</li>
+                <li>4 Douala</li>
+                <li>5 Kumba</li>
+                <li>6 Maroua</li>
+                <li>7 Yaounde</li>
+            </ol>
+        </div>
+        <div id="cube" class="mycube" >
+            <p>Cube</p>
+        </div>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $("#btn3").click(function () {
+                    //alert();
+                    $("#cube").animate({
+                        left:'150px',
+                        opacity:'1',
+                        width: '100px',
+                        height:'200px'
+
+                    },1000)
+                });
+
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>46_jquery_dom_manipulations_part_3</title>
+    <link rel="stylesheet" href="style46.css">
+</head>
+<!--
+    append() - Insert content at the end of the selected elements
+    prepend() - Insert content at the begining of the selected element
+    after() - Insert content after the selected elements
+    before() - Inserts content before the selected elements
+-->
+<body>
+    <button id="reset">Reset</button>
+    <h3>jQuery - DOM manipulation - Part 3</h3>
+    <button id="btn1">Append</button>
+    <button id="btn2">Prepend</button>
+    <button id="btn3">After</button>
+    <button id="btn4">Before</button>
+    <br><br>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+    <div id="div1" class="mydivs">
+        <p id="p1"> This is the first paragraph of first div</p>
+        <p id="p2"> This is the second paragraph of first div</p>
+        <p id="p3"> This is the third paragraph of first div</p>
+        <p id="p4"> This is the forth paragraph of first div</p>
+    </div>
+    <div id="div2" class="mydivs">
+            <p id="p11"> This is the first paragraph of second div</p>
+            <p id="p12"> This is the second paragraph of second div</p>
+            <p id="p13"> This is the third paragraph of second div</p>
+            <p id="p14"> This is the forth paragraph of second div</p>
+        </div>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        
+        $("#div1 p").attr("class","p1class"); //On document load, assign the class p1class to all p children of id:div1
+        $("#div2 p").attr("class","p2class"); //On document load, assign the class p2class to all p children of id:div2
+        
+        
+        
+        $("#btn1").click(function () {
+           $("#div1").append("<p id='p4'> <b>ADDED!</b>This is the first paragraph of first div</p>");
+        });
+
+    })
+</script>
+</html>

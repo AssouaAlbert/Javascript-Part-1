@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style46.css">
 </head>
 <!--
-    append() - Insert content at the end of the selected elements
+    append() - Insert content at the end of the selected elements .... appends adds as a child of selected elemet
     prepend() - Insert content at the begining of the selected element
-    after() - Insert content after the selected elements
+    after() - Insert content after the selected elements ...
     before() - Inserts content before the selected elements
 -->
 <body>
@@ -47,9 +47,28 @@
         
         
         $("#btn1").click(function () {
-           $("#div1").append("<p id='p4'> <b>ADDED!</b>This is the first paragraph of first div</p>");
+           $("#div1").append("<p> <b>ADDED!</b>This is the added paragraph of first div <strong>At the end </strong></p>");
+        
         });
-
+        $("#btn3").click(function () {
+           $("#div1").after("<p> <b>ADDED!</b>After the selected element</p>");// Added after the selected element (Not a a child elemt)
+        });
+        $("#btn4").click(function () {
+           $("#div1").before("<p> <b>ADDED!</b>Before the selected element</p>");// Added bfore the selected element(Not as a child element)
+        });
+        $("#btn2").click(function () {
+           $("#div1").prepend("<p> <b>ADDED!</b>This is the added paragraph of first div <strong>At the top </strong></p>"); //Added content at the top(as top child)
+        
+        });
+        $("#btn5").click(function () {
+           $("#div1").remove();//Remove removes the element completely from the code (not hide)
+        });
+        $("#btn5").click(function () {
+           $("p").remove("#p12, #p13"); // removes paragraphs with id p12 and p13
+        });
+        $("#btn5").click(function () {
+           $("#div1").empty();//Deletes just the contents of the selected elements
+        });
     })
 </script>
 </html>

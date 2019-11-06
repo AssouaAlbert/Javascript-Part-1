@@ -9,21 +9,21 @@
     ></script>
 </head>
 <!--
-    text() - function is used to get the text stored between elements
-    html() - 
-    attr() - 
-    css() -    
+    text() - function is used to get the text stored between elements. parsess arguments as text
+    html() - parses string argument as html. The html method works in thesame way but the html method is slightly different but also adds the tags inside the message
+    attr() - prints out the value of an attribute e.g. the id, class, value, name, etc
+    css() -   
 -->
 <body>
     <h1> jQuery - DOM manipulation</h1>
     <button id="btn1">Get text in p1</button>
     <button id="btn2">Change text in p2</button>
     <button id="btn3">Action 3</button>
-    <div>
+    <div  id="div1" class="mydivs">
         <p id="p1">This is the first <b>paragraph</b> in first division</p>
         <p id="p2">This is the second <b>paragraph</b> in first division <h6>has been changed</h6></p>
         <p id="p3">This is the third <b>paragraph</b> in first division</p>
-    </div id="div1" class="mydivs">
+    </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" >
         $(document).ready(function () {
@@ -34,6 +34,10 @@
                 ($("#p2 b").text("predefined"));
             });
             //The html method works in thesame way but the html method is slightly different but also adds the tags inside the message
+            $("#btn3").click(function(){
+                alert($("#div1").attr("id"));
+            });
+            
             
         });
     </script>

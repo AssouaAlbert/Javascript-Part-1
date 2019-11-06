@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Effects in jQuery</h1>
+    <h1>Effects in jQuery (moving the position of the cube from possition a to b with an animation)</h1>
     <p>This is a paragraph outside a DIV</p>
-    <button>Click me</button>
-    <button>Click Me too</button>
-    <button>Animate</button>
-    <div>
+    <button id="btn1">Click me</button>
+    <button id="btn2">Click Me too</button>
+    <button id="btn3">Animate</button>
+    <div id="firstdiv" class="mydivs">
         <p>
                 This is a paragraph 1 in div 1
         </p>
@@ -21,7 +21,7 @@
                 This is a paragraph 2 in div 1
         </p>
     </div>
-    <div>
+    <div id="seconddiv" class="mydivs">
             <p>
                     This is a paragraph 1 in div 2
             </p>
@@ -29,7 +29,7 @@
                     This is a paragraph 2 in div 2
             </p>
         </div>
-        <div>
+        <div id="thirddiv" class="mydivs">
             <ol>
                 <li>1 Bamenda</li>
                 <li>2 Buea</li>
@@ -39,5 +39,25 @@
                 <li>7 Yaounde</li>
             </ol>
         </div>
+        <div id="cube" class="mycube" >
+            <p>Cube</p>
+        </div>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $("#btn3").click(function () {
+                    //alert();
+                    $("#cube").animate({
+                        left:'150px',
+                        opacity:'1',
+                        width: '100px',
+                        height:'200px'
+
+                    },1000)
+                });
+
+            });
+        </script>
 </body>
 </html>

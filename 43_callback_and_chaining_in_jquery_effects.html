@@ -46,7 +46,7 @@
         <script type="text/javascript">
             $(document).ready(function() {
 
-                $("#btn3").click(function () {
+              $("#btn3").click(function () {
                     //alert();
                     $("#cube").animate({
                         left:'150px',
@@ -56,7 +56,7 @@
 
                     },1000)
                 });
-                 $("#btn1").click(function () {
+               $("#btn1").click(function () {
                     $("#p1").fadeOut(3000, function () {
                     alert("I am done");
                     //this is a call bak function in javscript
@@ -65,10 +65,10 @@
                     
                });
                $("#btn2").click(function () {
-                    $("#p2").fadeOut(3000, function () {
+                    $("#seconddiv").slideToggle(3000, function () {
                     alert("I am done");
                     //this is a call bak function in javscript
-                    //after fadeout for 3000 seconds, the function will do the next function
+                    //after slide for 3000 seconds, the function will do the next function
                     });
                     
                });

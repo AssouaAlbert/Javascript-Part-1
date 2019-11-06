@@ -57,10 +57,11 @@
         <div>
             <p>Kill the greats was the biggest mistake in americam history. The presidents and all the historians who tried to fix this with stories have failed</p>
             <p>I know you will try to hide me by clicking the button or toggle me, either ways do it and let's know if you understand</p>
-            <button>Hide P</button>
-            <button>Show P</button>
-            <button>Toggle</button>
+            <button id="btnhide">Hide P</button>
+            <button id="btnshow">Show P</button>
+            <button id="btntoggle">Toggle</button>
         </div>
+        
 </body>
 
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -69,6 +70,9 @@
     //Therefore this script will only work when the page has completely loaded;
     $(document).ready(function(){
     //We will move the button onclick even to jquery
+    $("btnhide").click(hide);
+    $("btnshoe").click(shoe);
+    $("btntoggle").click(toggle);
     $("#btn1").click(fn1);
     $("#btn2").click(fn2);
     $("#btn3").click(fn3);

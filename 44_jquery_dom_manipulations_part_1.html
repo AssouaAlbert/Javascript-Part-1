@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery DOM manipulation Part 1</title>
+    <script type="text/javsscript"
+    ></script>
+</head>
+<!--
+    text() - function is used to get the text stored between elements
+    html() - 
+    attr() - 
+    css() -    
+-->
+<body>
+    <h1> jQuery - DOM manipulation</h1>
+    <button id="btn1">Get text in p1</button>
+    <button id="btn2">Change text in p2</button>
+    <button id="btn3">Action 3</button>
+    <div>
+        <p id="p1">This is the first <b>paragraph</b> in first division</p>
+        <p id="p2">This is the second <b>paragraph</b> in first division <h6>has been changed</h6></p>
+        <p id="p3">This is the third <b>paragraph</b> in first division</p>
+    </div id="div1" class="mydivs">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" >
+        $(document).ready(function () {
+            $("#btn1").click(function(){
+                alert($("#p1").text());
+            });
+            $("#btn2").click(function(){
+                ($("#p2 b").text("predefined"));
+            });
+            //The html method works in thesame way but the html method is slightly different
+        });
+    </script>
+</body>
+</html>

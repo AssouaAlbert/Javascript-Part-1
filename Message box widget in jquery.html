@@ -12,8 +12,8 @@
 
 </head>
 <body>
-    <h2>Message box is jQuery</h2>
-    <div id="firstdiv" class="mydiv">
+    <h3>Message box is jQuery</h3>
+    <div id="firstdiv" class="mydivs">
         <h3>Hello welcome to the Telesco Learing</h3>
         <br>
         <button id="btn1">Click to show message box</button>
@@ -28,5 +28,11 @@
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="/jqueryui/jquery-ui.js" type="text/javascript"></script>
 <script>
+    $("#btn1").click(function(){
+        $("#messagebox").dialog(
+            
+        );
+
+    });
 </script>
 </html>

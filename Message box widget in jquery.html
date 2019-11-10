@@ -37,6 +37,23 @@
             // draggable: false,
             // resizable: false, //Prevent the box from being resized
             modal: true, //prevents elements in the backgroun to be clickable e.g cookies, policies and term on other websites
+            //adding button to the message box
+            buttons: [
+                {
+                    text:"Close",
+                    icon:"ui-icon-heart",
+                    click : function(){
+                        $(this).dialog("close");
+                    }
+                },
+                {
+                    text: "Ok",
+                    icon: "ui-icon-heart",
+                    click: function (){
+                        $(this).dialog("close");
+                    }
+                }
+            ]
 
         });
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tooltip_widget_control_in_jquery_ui_</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+    <div class="div">
+       <h1>Introduction to jquery</h1>
+       <input type="text" id="datepicker">
+    </div>
+    <img src="/Themind.jpg" alt="J cole" width="200px" title="The mind: J Cole" id="jcole">
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="/jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script>
+    
+$("#datepicker").datepicker({
+    //number of months to be visible on the date picker
+    numberOfMonths: 1,
+    //Make user able to change the month
+    changeMonth: true,
+    changeYear: true,
+    //add week header
+    weekHeader: "wk no",
+    //show days of next and previous in  current month (do not leave blank spaces)
+    showOtherMonths : true,
+    minDate : new Date(2017,0,1),
+    maxDate : new Date(2020,11,30),
+
+});
+$("img").tooltip({
+    //key value pairing is attribute and value combined
+    //tooltips example title for img
+    //In this example we will make the title follow us all over the mouse
+    track: true, //track the mouse on hover on this seclector
+    // what is there is no title in the image
+    content: "Albert will be great", //this will rename the title attribute
+    show : {} //do not fade in an out the text let it bounce
+});
+</script>
+
+</html>

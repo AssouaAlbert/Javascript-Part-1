@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Draggable interactions in jquery ui</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Draggables</h1>
+    <div style="border: 1px solid green;">
+  <div class="mydivs" style="background-color: aquamarine; width: 100px; height: 100px;">
+      <h2 style="text-align :center">Cube 1</h2>
+  </div> 
+  <br>
+  <div class="mydivs" style="background-color: aquamarine; width: 100px; height: 100px;">
+      <h2 style="text-align :center">Cube 2</h2>
+  </div> 
+</div>
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="/jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script>
+$(".mydivs").draggable({
+    //axis: "y", //draggable only on the y axis
+    //axis: "x", //draggable only on the x axis
+    containment: "parent", //The default is the document, in this exaple the parent is div
+    //containament: "document",
+    cursor: "grabbing", //changes the icon when it is grabbed. u can use icons from the ui icon list
+    opacity: 0.5, //opacity changes when item is grabbed.
+    //grid: [50,50],// an invincible grid is cread of boxes 50pxby50px for the move of the item
+    snap: true,// setting snap to true
+    snapTolerance: 10, //When the items are 10px close the stick to each other
+    snapTolerance: 20
+
+});
+</script>
+</html>

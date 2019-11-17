@@ -24,24 +24,39 @@
         //filter is a funtion of array with just on parameter return true or flase
         //id price a row into new array if item.price<=4500
     })
+    ExpensiveCars.forEach((item)=>{
+        document.write("MapArray_NamesOfCars: "+item+", price: "+item.price+", name: " +item.name+"<br>");
+    })
     //map an array creates a new array from another array by mapping a spacific column
     const MapArray_NamesOfCars = cars.map((item) => {
         return item.name;
         //returns the items name
     })
+    MapArray_NamesOfCars.forEach((item)=>{
+        document.write("MapArray_NamesOfCars: "+item+"<br>");
+    })
     const MapArray_PriceOfCars = cars.map((item) => {
         return item.price;
         //returns the items name
     })
+    MapArray_PriceOfCars.forEach((item)=>{
+        document.write("MapArray_PriceOfCars: "+item+"<br>");
+    })
     //Create new array Tesla_Car of car  from Cars if name of car is Tesla
     const Tesla_Car = cars.find((item) => {
-       return item.name === "Tesla";
+       return item.name == "Mecerdez";
         //returns the the FIRST row of the array if array.name equals Tesla
     })
+    
+    document.write("Tesla_Car: "+Tesla_Car+", price: "+Tesla_Car.price+", name: " +Tesla_Car.name+"<br>");
+    
     //Return true or fals from if condtion and maps it to new array
     const TrueorFlase_PriceOfCars = cars.map((item) => {
         return item.price > 6000;
         //returns the items bolean
+    })
+    TrueorFlase_PriceOfCars.forEach((item)=>{
+    document.write("TrueorFlase_PriceOfCars: "+ TrueorFlase_PriceOfCars.indexOf(item)+" ,Value: "+item+"<br>")
     })
     //Using the for each statement in an array. For ewach item in aray print
     cars.forEach((item) =>

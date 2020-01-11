@@ -51,11 +51,8 @@
         <li><a href="./Success Form Validations in JavaScript.html">Success Form Validations in JavaScript</a></li>
         <li><a href="./tooltip_widget_control_in_jquery_ui_.html">tooltip_widget_control_in_jquery_ui_</a></li>
         <li><a href=""></a></a></li>
-        
-
-
     </ul>
-    
+
 
 </body>
 

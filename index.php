@@ -11,7 +11,7 @@
 <body>
     <h1>Udemy Javascript</h1>
     <?php
-    $directory = "./JS Udemy";
+    $directory = "./JSUdemy";
 
 if (is_dir($directory)){
   if ($opendirectory = opendir($directory)){

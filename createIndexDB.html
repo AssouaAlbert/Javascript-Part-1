@@ -1,0 +1,108 @@
+<!--
+IndexedDB lets you store and retrieve objects that are indexed with a key; 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with IndexDB</title>
+</head>
+<body>
+    <h1><a href="https://www.youtube.com/watch?v=vb7fkBeblcw&t=0s">For more information</a></h1>
+    <label for="dbname"> Database Name </label>
+    <input id="dbname" name="dbname" type="text">
+    <label for="version"> Version Number </label><input id="version" name="version" type="number">
+    <input type="button" id="createdbbtn"value="Create DB">
+    <input type="button" id="addNoteBtn"value="Add Note">
+    <input type="button" id="viewdb"value="View">
+    <img style="padding-top: 30px;" src="./Annotation 2020-03-02 233132.png" width='900' height='400' alt="Annotation on how IndexDB works" srcset="">
+</body>
+<script>
+    //Define global variables
+    let db= null; //Never define the database as a global object/variable. This is just for illustration
+    const btn = document.getElementById('createdbbtn');
+    const btnNote = document.getElementById('addNoteBtn');
+    const viewDB = document.getElementById('viewdb');
+    //Add event listeners
+    btn.addEventListener('click',create);
+    viewDB.addEventListener('click',viewNotes);
+    btnNote.addEventListener('click',addNote);
+    //Define functions
+    /*
+    This functions will display the contentin the table pf te database;
+    */
+    function viewNotes(){
+        /*Create a transaction of the database db(must be created first) to read data on the 
+        personal_notes
+        */
+        const txt = db.transaction("personal_notes", "readonly");
+        const pNotes = txt.objectStore("personal_notes"); //Litterally access the object stores in personal_notes table
+        //
+        const request = pNotes.openCursor();//Like a mouse cursors are used to move over the database(I think)
+        request.onsuccess = function(e) {
+            const cursor = e.target.result;
+            if(cursor){//If there exist any object in the database
+                alert(`Note: ${cursor.key}, Value${cursor.value.fileType}`) //Print the object;
+                continue;//It will iterate over the object store
+            }
+        }
+
+    }
+    function addNote(){
+         const task = {
+            title1: "Albert", //At this line the key is title1 as defined in line 86 and 87
+            fileType: "pdf" //Added properthies of the object;
+          }
+          const txt = db.transaction("personal_notes", "readwrite"); //Open a transaction on the database 
+          const pNotes = txt.objectStore("personal_notes"); //Access the object store in that table
+          pNotes.add(task); //Add this object, you must define the object key or it will cast an error.
+    }
+    function create(e){
+        //Create caonst cariables
+        const dbname= document.getElementById('dbname').value;
+        const version= document.getElementById('version').value;
+
+        //Open a request create a database name and version and returns a promise
+        const request = indexedDB.open(dbname,version);
+
+        //Add event listeners to request Object
+        request.onupgradeneeded = (e) => {
+            db = e.target.result; //request.result;
+            //Syntaxt for object to be added to the database
+            // const task = {
+            //     title1: "Albert", //The title1 is the key
+            //     fileType: "pdf"
+            // }
+            /*
+            Create tables in the database; where keyPath is the key maybe primary key
+             as in a database (it is optional)
+            Read the MDN notes
+            */
+            /*
+              Create a table to store objects, in the database, with name personal_notes and 
+              keyPath (primarykey): title1, This key is gotten from the object property as defined in the syntax 
+              above
+              From MDN
+              The method takes the name of the store as well as a parameter object that lets you define important 
+              optional properties. You can use the property to uniquely identify individual objects in the store. 
+              As the property is an identifier, it should be unique to every object, and every object should have 
+              that property.
+            */
+            const pNotes= db.createObjectStore("personal_notes", {keyPath: 'title1'});
+            const todoNotes= db.createObjectStore("to_notes", {keyPath: 'title2'}); //2nd Tabble
+            // alert(`Request onupgradeneeded called`);
+        }
+        request.onsuccess = (e) => {
+            db = e.target.result;
+            // alert(`Successful request`);
+            console.log(`Successful request Result: ${db}`);
+        }
+        request.onerror = (e) => {
+            // alert(`Error!!`);
+            console.log(`Error!!`);
+        }
+
+    }
+</script>
+</html>

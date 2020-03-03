@@ -43,15 +43,17 @@ IndexedDB lets you store and retrieve objects that are indexed with a key;
         request.onsuccess = function(e) {
             const cursor = e.target.result;
             if(cursor){//If there exist any object in the database
-                alert(`Note: ${cursor.key}, Value${cursor.value.fileType}`) //Print the object;
-                continue;//It will iterate over the object store
+                alert(`Note: ${cursor.key}, Value: ${cursor.value.fileType}`) //Print the object;
+                //continue;//It will iterate over the object store Watch video in heading
+                console.log(`Key: ${cursor.key}, Value: ${cursor.value.fileType}`);
+                console.table(cursor.value);
             }
         }
 
     }
     function addNote(){
          const task = {
-            title1: "Albert"+Math.random(), //At this line the key is title1 as defined in line 86 and 87
+            title1: "Albert", //At this line the key is title1 as defined in line 86 and 87
             fileType: "pdf" //Added properthies of the object;
           }
           const txt = db.transaction("personal_notes", "readwrite"); //Open a transaction on the database 
